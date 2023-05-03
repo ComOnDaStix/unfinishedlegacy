@@ -1,0 +1,130 @@
+.menu {
+    display: none;
+  position: fixed;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .menu.open {
+
+    transform: translateX(0);
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      display: block;
+    }
+
+    .h1 {
+        display: flex;
+        flex-direction: column;
+        font-size: 8px;
+
+      
+    }
+
+     .category {
+      margin-top: 3%;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+     }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+      
+        margin-top: 5%;
+    }
+
+   
+
+    .links {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .linkItem {
+      list-style: none;
+        color: #000; 
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 200;
+        margin-bottom: 5%;
+        letter-spacing: 1px;
+        padding-top: 20px;
+        border-bottom: 1px solid #000; 
+        width: 92%;
+     
+    }
+
+    .arrow {
+      align-items: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 85%;
+    }
+
+    .dropdown {
+      margin-top: 5%;
+      letter-spacing: 1px;
+      font-size: 12px;
+      list-style: none;
+      margin-left: 5%;
+      max-height: 500px;
+      animation: slide-down 0.3s ease-in-out forwards;
+    }
+    
+
+    .dropdownItem {
+      margin-bottom: 10%;
+      border-bottom: 0.8px solid rgb(216, 212, 212);
+      padding-bottom: 5%;
+      width: 100%;
+    }
+
+      .dropdown.hide {
+    animation-name: slide-up;
+    
+  }
+
+  .styles.arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .styles.arrowRotate {
+    transform: rotate(90deg);
+  }
+
+  
+
+    @keyframes slide-down {
+      0% {
+        max-height: 0;
+        opacity: 0;
+      }
+      100% {
+        max-height: 250px; 
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-up {
+      0% {
+        max-height: 250px;
+        opacity: 1;
+      }
+    
+      100% {
+        max-height: 0;
+        opacity: 0;
+      }
+    }
+  
+  }
+  
+
