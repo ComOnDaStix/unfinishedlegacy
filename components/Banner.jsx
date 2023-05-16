@@ -12,7 +12,7 @@ const Banner = () => {
     "/images/bannerimg2.webp",
   ];
 
-  console.log("test");
+
 
   useEffect(() => {
     if (autoChange) {
