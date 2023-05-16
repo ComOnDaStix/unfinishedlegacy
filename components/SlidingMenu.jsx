@@ -2,6 +2,7 @@ import styles from "../styles/SlidingMenu.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import Footer from "./Footer";
 
 const SlidingMenu = ({ isOpen }) => {
   const [dropdownOpen, setDropDownOpen] = useState({
@@ -14,7 +15,6 @@ const SlidingMenu = ({ isOpen }) => {
 
   const toggleDropdown = (link) => {
     setDropDownOpen((prevState) => ({
-      ...prevState,
       [link]: !prevState[link],
     }));
   };
@@ -188,15 +188,57 @@ const SlidingMenu = ({ isOpen }) => {
             <ul className={styles.dropdown}>
               <li className={styles.dropdownItem}>FLAGSHIP</li>
               <li className={styles.dropdownItem}>CONTACT US</li>
+            
             </ul>
           ) : (
             <ul className={`${styles.dropdown} ${styles.hide}`}>
               <li className={styles.dropdownItem}>FLAGSHIP</li>
               <li className={styles.dropdownItem}>CONTACT US</li>
             </ul>
+            
           )}
+         
         </li>
       </ul>
+      <div className="slide-menu-footer">
+            <h1 className={styles.h1Footer}>about us</h1>
+            <h1 className={styles.h1Footer}>main menu</h1>
+            
+          </div>
+          <div className={styles.logoContainer}>
+          <Link href={"/"} className={styles.link}>
+            <Image
+              src={"/images/ig.png"}
+              width={18}
+              height={18}
+              className={styles.icon}
+            />
+          </Link>
+          <Link href={"/"} className={styles.link}>
+            <Image
+              src={"/images/facebook.png"}
+              width={18}
+              height={18}
+              className={styles.icon}
+            />
+          </Link>
+          <Link href={"/"} className={styles.link}>
+            <Image
+              src={"/images/tiktokreal.png"}
+              width={19}
+              height={19}
+              className={styles.icon}
+            />
+          </Link>
+          <Link href={"/"} className={styles.link}>
+            <Image
+              src={"/images/youtubereal.png"}
+              width={24}
+              height={24}
+              className={styles.icon}
+            />
+          </Link>
+          </div>
     </div>
   );
 };
