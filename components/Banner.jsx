@@ -12,6 +12,8 @@ const Banner = () => {
     "/images/bannerimg2.webp",
   ];
 
+  console.log("test");
+
   useEffect(() => {
     if (autoChange) {
       const interval = setInterval(() => {
@@ -28,7 +30,9 @@ const Banner = () => {
 
   const prevSlide = () => {
     setAutoChange(false);
-    setActiveIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setActiveIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
 
   return (
@@ -38,19 +42,27 @@ const Banner = () => {
           <Image
             key={src}
             src={src}
-            className={`${styles.banner} ${index === activeIndex ? styles.active : ""}`}
+            className={`${styles.banner} ${
+              index === activeIndex ? styles.active : ""
+            }`}
             width={2000}
             height={1000}
           />
         ))}
       </div>
-      <button className={styles.arrowLeft} onClick={prevSlide}>&#10094;</button>
-      <button className={styles.arrowRight} onClick={nextSlide}>&#10095;</button>
+      <button className={styles.arrowLeft} onClick={prevSlide}>
+        &#10094;
+      </button>
+      <button className={styles.arrowRight} onClick={nextSlide}>
+        &#10095;
+      </button>
       <div className={styles.indicators}>
         {images.map((_, index) => (
           <div
             key={index}
-            className={`${styles.indicator} ${index === activeIndex ? styles.activeIndicator : ""}`}
+            className={`${styles.indicator} ${
+              index === activeIndex ? styles.activeIndicator : ""
+            }`}
           />
         ))}
       </div>
