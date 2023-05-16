@@ -75,7 +75,7 @@ const Navbar = () => {
           <div className={styles.bagContainer}>
             <Link href={"/"} className={styles.link}>
               {" "}
-              <div className={styles.bag}>BAG</div>
+              <div className={styles.bag}>BAG<span>(1)</span></div>
             </Link>
           </div>
         </div>
